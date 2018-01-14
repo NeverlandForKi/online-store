@@ -3,6 +3,7 @@ import { TabBar } from 'antd-mobile';
 import 'antd-mobile/dist/antd-mobile.css'
 import Productions from './productions'
 import Profile from './profile'
+import Orders from './orders'
 
 class Home extends React.Component {
   constructor(props) {
@@ -16,18 +17,13 @@ class Home extends React.Component {
 
   renderContent(type) {
     let txt = ''
-    if (type == 'list') {
+    if (type === 'list') {
       return <Productions />
-    } else if (type == 'order_list') {
-      txt = '订单列表'
+    } else if (type === 'order_list') {
+      return <Orders />
     } else {
       return <Profile />
     }
-    return (
-      <div>
-        <p>{txt}</p>
-      </div>
-    );
   }
 
   render() {

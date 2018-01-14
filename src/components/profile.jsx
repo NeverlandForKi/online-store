@@ -2,7 +2,6 @@ import React from 'react'
 import { List } from 'antd-mobile';
 
 const Item = List.Item;
-const Brief = Item.Brief;
 
 class ProfileComponent extends React.Component {
   state = {
